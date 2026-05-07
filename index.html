@@ -1,1 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Code Store</title>
+</head>
+<body>
+  <h1>Welcome to Code Store</h1>
+  <p>Purchase my project code securely:</p>
 
+  <!-- Buy button -->
+  <button id="buy-button">Buy Now</button>
+
+  <!-- Paddle checkout script -->
+  <script src="https://cdn.paddle.com/paddle/paddle.js"></script>
+  <script>
+    // Your real Seller ID
+    Paddle.Setup({ vendor: 332502 });
+
+    document.getElementById("buy-button").addEventListener("click", function() {
+      Paddle.Checkout.open({
+        product: "pro_01kr10x7r5f79yrx9qs618qgsy"
+      });
+    });
+  </script>
+</body>
+</html>
